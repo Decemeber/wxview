@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class="container">
+  <i-row>
+    <i-col span='24'>
+      <i-tabs current="{{ currentStatus }}" bindchange="handleChangeStatus">
+        <i-tab key="1" title="我是乘客"></i-tab>
+        <i-tab key="2" title="我是车主"></i-tab>
+      </i-tabs>
+    </i-col>
+  </i-row>
+  <i-row>
+      <i-col span='24'>
+       <i-tabs current="{{  currentTarget }}" bindchange="handleChangeTarget">
+         <i-tab key="1" title="上班"></i-tab>
+         <i-tab key="2" title="下班"></i-tab>
+       </i-tabs>
+     </i-col>
+  </i-row>
+  <i-row class="my-text">
+    <i-col span='6' offset='1'>出发时间：</i-col>
+    <i-col span='11'>
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <view>{{time}}</view>
+      </picker>
+    </i-col>
+  </i-row>
+  <i-row class='my-text'>
+    <i-col span='6' offset='1'>当前路线：</i-col>
+    <i-col span='10'> {{currentRoute.start}} => {{currentRoute.end}}</i-col>
+    <i-col span='8'>
+      <!-- <button class='my-mini-button'>改变线路</button> -->
+    </i-col>
+  </i-row>
+  <view>
+    <map name="" class='my-map'></map>
+  </view>
+  <view class="" hover-class="none" hover-stop-propagation="false" class='price-tips'>
+      <i-icon type="redpacket_fill" />
+      建议打赏价格 {{suggestPrice}} 元
+  </view>
+  <i-row class="my-text">
+    <i-col span='10'>
+      该路线共有{{carNumber}}个车主，
+    </i-col>
+    <i-col span='8'>
+      {{comingCarNumber}}个正在赶来
+    </i-col>
+    <i-col span='6'>
+      {{leaveCarNumber}}个已驶离
+    </i-col>
+  </i-row>
+  <i-row class="footer">
+      <i-tab-bar current="{{ currentPage }}" color="#f759ab" bindchange="handleChangePage">
+        <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+        <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="路线"></i-tab-bar-item>
+        <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
+        <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的">
+        </i-tab-bar-item>
+      </i-tab-bar>
+  </i-row>
+  <i-row>
+    <i-col span='2'>
+        <block  wx:if="{{!hasUserInfo && canIUse}}">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </block>
+    </i-col>
+  </i-row>
+  <i-row>
+     <i-col span='24'>
+       <i-button  wx:if="{{!hasUserInfo && canIUse}}"  open-type="getUserInfo" bindgetuserinfo="getUserInfo"type="success" size="small">微信授权趣上班</i-button>
+     </i-col>
+   </i-row>
+</view>

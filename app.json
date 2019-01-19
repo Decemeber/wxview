@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/information/information",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "趣上班",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-icon": "../../dist/icon/index"
+  }
+}
