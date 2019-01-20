@@ -1,2 +1,31 @@
 <!--pages/itinerary/itinerary.wxml-->
-<text>pages/itinerary/itinerary.wxml</text>
+<view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="my-header" hover-class="none" hover-stop-propagation="false">
+        我的路线
+    </view>
+    <i-row>
+        周边最多路线
+    </i-row>
+    <i-row>
+        <view class="" hover-class="none" hover-stop-propagation="false" wx:for="{{lineArray}}">
+            {{index+11}} {{item.start}} {{item.end}}
+            <radio class="" value="" disabled="false" checked="false" color="">
+                
+            </radio>
+        </view>
+    </i-row>
+     <i-row>
+        我的常用路线
+    </i-row>
+    <i-row>
+        <view class="" hover-class="none" hover-stop-propagation="false" wx:for="{{lineArray}}">
+            {{index}} {{item.start}} {{item.end}}
+            <radio class="" value="" disabled="false" checked="false" color=""></radio>
+        </view>
+    </i-row>
+    <map name=""></map>
+    <i-button>新增路线</i-button>
+    <view class="my-text">
+        当前选择 ：{{currentLine.start}} =>  {{currentLine.end}}
+    </view>
+</view>

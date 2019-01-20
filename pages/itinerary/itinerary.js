@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      currentLine:{
+          start:'家1',
+          end:'公司 1'
+      },
+      lineArray:[
+          {
+            start:'家家',
+            end:'公司公司公司'
+          },
+          {
+            start:'家家',
+            end:'公司公司公司'
+          },{
+            start:'家家',
+            end:'公司公司公司'
+          },{
+            start:'家家',
+            end:'公司公司公司'
+          }
+      ]
   },
 
   /**

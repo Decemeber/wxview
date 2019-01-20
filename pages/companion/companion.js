@@ -1,4 +1,4 @@
-// pages/information/information.js
+// pages/companion/companion.js
 Page({
 
   /**

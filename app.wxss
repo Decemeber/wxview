@@ -3,3 +3,10 @@
   height: 100%;
   margin-top: -20rpx;
 } 
+.my-header {
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #80848f;
+}

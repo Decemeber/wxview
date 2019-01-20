@@ -1,1 +1,11 @@
 /* pages/itinerary/itinerary.wxss */
+.my-text {
+    width: 100%;
+    font-size: 30rpx;
+    color: #FFF;
+    text-align: center;
+    background-color: #495060;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}

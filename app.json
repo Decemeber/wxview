@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/information/information",
+    "pages/companion/companion",
     "pages/mine/mine",
     "pages/itinerary/itinerary"
   ],
@@ -17,7 +17,8 @@
     "i-col": "../../dist/col/index",
     "i-radio-group": "../../dist/radio-group/index",
     "i-radio": "../../dist/radio/index",
-    "i-icon": "../../dist/icon/index"
+    "i-icon": "../../dist/icon/index",
+    "i-button": "../../dist/button/index"
   },
    "tabBar": {
      "color": "#495060",
@@ -31,15 +32,15 @@
          "selectedIconPath": "images/123.jpg"
        },
        {
-         "pagePath": "pages/information/information",
+         "pagePath": "pages/itinerary/itinerary",
          "text": "路线",
          "iconPath": "images/123.jpg",
          "selectedIconPath": "images/123.jpg"
        },
        
        {
-         "pagePath": "pages/logs/logs",
-         "text": "日志",
+         "pagePath": "pages/companion/companion",
+         "text": "同伴",
          "iconPath": "images/123.jpg",
          "selectedIconPath": "images/123.jpg"
        },
