@@ -1,25 +1,17 @@
-// pages/mine/mine.js
+// pages/roadselect/roadselect.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      myphoneNumber:'15098729002',
-      verificationCode:'931109',
-      carTypeArray:['Audi','BMW',"Benz"],
-      carTypeIndex:'',
-      colorTypeArray:['红色','黑色','白色'],
-      colorTypeIndex:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getUserInfo({
-      
-    })
+
   },
 
   /**
@@ -71,32 +63,13 @@ Page({
 
   },
   // ly new add
-  handleGetCode() {
-      // requset  获取rescode
-      let verificationCode = 'resCode'
-      this.setData({
-        verificationCode
-      })
-  },
   handleBack() {
-     wx.switchTab({
-       url: '/pages/index/index'
-     })
-  },
-  handleCarPicker({detail}) {
-    this.setData({
-      carTypeIndex:detail.value
+    wx.switchTab({
+      url:'/pages/mine/mine'
     })
   },
-  handleColorPicker({detail}) {
-    this.setData({
-      colorTypeIndex: detail.value
-    })
-  },
-  handleSave() {
-    //
-    wx.redirectTo({
-      url:'/pages/roadselect/roadselect'
-    })
+  handleBuild() {
+
   }
+ 
 })

@@ -1,10 +1,86 @@
 <!--pages/mine/mine.wxml-->
 <view>
-    <view class="my-header" hover-class="none" hover-stop-propagation="false">
+    <!-- <view class="my-header" hover-class="none" hover-stop-propagation="false">
         <i-row>
             <i-col span='6'  bindtap="handleBack"><i-icon type="return" size='30'/></i-col>
             <i-col span='12'>个人信息</i-col>
             <i-col span='6'></i-col>
         </i-row>
+    </view> -->
+    <self-header headerText='个人信息' bind:myevent ='handleBack'>
+    </self-header>
+    <view class="my-miniheader" hover-class="none" hover-stop-propagation="false">
+        <i-row>
+            <i-col span='4' offset='3'>
+                手机号码
+            </i-col>
+        </i-row>
     </view>
+    <view class="my-row" hover-class="none" hover-stop-propagation="false">
+        <i-row>
+            <i-col span='4' offset='3'>手机号:</i-col>
+            <i-col span='10'>{{myphoneNumber}}</i-col>
+            <i-col span='5'>
+                <button class="my-minibutton" bindtap='handleGetCode'>获取验证码</button>
+            </i-col>
+        </i-row>
+    </view>
+    <view class="my-row" hover-class="none" hover-stop-propagation="false">
+        <i-row>
+             <i-col span='4' offset='3'>验证码:</i-col>
+             <i-col span='10'>{{verificationCode}}</i-col>
+             <i-col span='7'></i-col>
+         </i-row>
+    </view>
+    <view class="my-miniheader" hover-class="none" hover-stop-propagation="false">
+        <i-row>
+            <i-col span='8' offset='3'>车辆信息（车主填写）</i-col>
+        </i-row>
+    </view>
+    <view class="my-row" hover-class="none" hover-stop-propagation="false">
+        <i-row>
+            <i-col span='4' offset='3'>车辆品牌:</i-col>
+            <i-col span='10'>
+                <picker bindchange="handleCarPicker" value="{{carTypeIndex}}" range="{{carTypeArray}}">
+                     <view class="picker"><view wx:if='{{!carTypeIndex}}'>请选择</view>{{carTypeArray[carTypeIndex]}}</view>
+                 </picker>
+            </i-col>
+            <i-col span='7'>
+            </i-col>
+        </i-row>
+        <i-row>
+             <i-col span='4' offset='3'>车牌号码:</i-col>
+             <i-col span='10'>鲁G1108QE</i-col>
+             <i-col span='7'></i-col>
+         </i-row>
+        <i-row>
+              <i-col span='4' offset='3'>车辆颜色:</i-col>
+              <i-col span='10'>
+                    <picker bindchange="handleColorPicker" value="{{colorTypeIndex}}" range="{{colorTypeArray}}">
+                        <view class="picker">
+                            <view wx:if='{{!colorTypeIndex}}'>请选择</view>
+                            {{colorTypeArray[colorTypeIndex]}}
+                        </view>
+                    </picker>
+              </i-col>
+              <i-col span='7'></i-col>
+        </i-row>
+        <i-row>
+            <i-col span='4' offset='3'>座位数量:</i-col>
+            <i-col span='10'>
+                <picker bindchange="handleColorPicker" value="{{colorTypeIndex}}" range="{{colorTypeArray}}">
+                    <view class="picker">
+                        <view wx:if='{{!colorTypeIndex}}'>请选择</view>
+                        {{colorTypeArray[colorTypeIndex]}}
+                    </view>
+                </picker>
+            </i-col>
+            <i-col span='7'></i-col>
+        </i-row>
+    </view>
+    <i-row>
+        <i-col span='12' offset='6'>
+            <i-button bind:click="handleSave" type="warning" size="small">保存</i-button>
+        </i-col>
+    </i-row>
 </view>

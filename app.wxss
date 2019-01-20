@@ -8,5 +8,36 @@
   height: 70rpx;
   line-height: 70rpx;
   text-align: center;
+  color:#FFFFFF;
   background-color: #80848f;
+}
+
+.my-miniheader {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 20rpx;
+  background-color: #dddee1;
+  font-size: 25rpx;
+}
+.my-text {
+  font-size: 25rpx;
+}
+.my-minibutton {
+  font-size: 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #fff;
+  background-color: #ff9900;
+  border-radius: 2rpx;
+  border:1rpx #ff9900 solid; 
+
+}
+.my-row {
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-top: 20rpx;
+  font-size: 25rpx;
+}
+.my-map {
+  
 }

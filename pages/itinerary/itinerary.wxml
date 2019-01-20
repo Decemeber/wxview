@@ -3,7 +3,7 @@
     <view class="my-header" hover-class="none" hover-stop-propagation="false">
         我的路线
     </view>
-    <i-row>
+    <!-- <i-row>
         周边最多路线
     </i-row>
     <i-row>
@@ -27,5 +27,5 @@
     <i-button>新增路线</i-button>
     <view class="my-text">
         当前选择 ：{{currentLine.start}} =>  {{currentLine.end}}
-    </view>
+    </view> -->
 </view>

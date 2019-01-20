@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/companion/companion",
     "pages/mine/mine",
+    "pages/roadselect/roadselect",
     "pages/itinerary/itinerary"
   ],
   "window":{
@@ -18,7 +19,8 @@
     "i-radio-group": "../../dist/radio-group/index",
     "i-radio": "../../dist/radio/index",
     "i-icon": "../../dist/icon/index",
-    "i-button": "../../dist/button/index"
+    "i-button": "../../dist/button/index",
+    "self-header": "../../components/selfheader/index"
   },
    "tabBar": {
      "color": "#495060",
