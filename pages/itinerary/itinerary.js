@@ -1,4 +1,4 @@
-// pages/mine/mine.js
+// pages/itinerary/itinerary.js
 Page({
 
   /**
@@ -62,10 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  handleBack() {
-     wx.switchTab({
-       url: '/pages/index/index'
-     })
   }
 })

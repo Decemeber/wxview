@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/information/information",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/itinerary/itinerary"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,5 +18,37 @@
     "i-radio-group": "../../dist/radio-group/index",
     "i-radio": "../../dist/radio/index",
     "i-icon": "../../dist/icon/index"
-  }
+  },
+   "tabBar": {
+     "color": "#495060",
+     "borderStyle": "white",
+     "selectedColor": "#19be6b",
+     "backgroundColor": "#FFFFFF",
+     "list": [{
+         "pagePath": "pages/index/index",
+         "text": "首页",
+         "iconPath":"images/123.jpg",
+         "selectedIconPath": "images/123.jpg"
+       },
+       {
+         "pagePath": "pages/information/information",
+         "text": "路线",
+         "iconPath": "images/123.jpg",
+         "selectedIconPath": "images/123.jpg"
+       },
+       
+       {
+         "pagePath": "pages/logs/logs",
+         "text": "日志",
+         "iconPath": "images/123.jpg",
+         "selectedIconPath": "images/123.jpg"
+       },
+       {
+         "pagePath": "pages/mine/mine",
+         "text": "我的",
+         "iconPath": "images/123.jpg",
+         "selectedIconPath": "images/123.jpg"
+       }
+     ]
+   }
 }

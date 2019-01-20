@@ -7,7 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUse: wx.canIUse('i-button.open-type.getUserInfo'),
     currentStatus:'1',
     currentTarget:'',
     suggestPrice:'10',
@@ -19,7 +19,7 @@ Page({
       start:'建筑大学',
       end:'软件园'
     },
-    currentPage:'',
+    currentPage: 'pages/index/index',
 
   },
   //事件处理函数
@@ -83,8 +83,11 @@ Page({
     this.setData({
           currentPage: detail.key
     });
-    wx.redirectTo({
-      url: '/pages/mine/mine'
+    wx.switchTab({
+        url: detail.key
     })
+    // wx.redirectTo({
+    //   url: '/pages/mine/mine'
+    // })
   }
 })

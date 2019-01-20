@@ -49,15 +49,6 @@
       {{leaveCarNumber}}个已驶离
     </i-col>
   </i-row>
-  <i-row class="footer">
-      <i-tab-bar current="{{ currentPage }}" color="#f759ab" bindchange="handleChangePage">
-        <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-        <i-tab-bar-item key="group" icon="group" current-icon="group_fill" title="路线"></i-tab-bar-item>
-        <i-tab-bar-item key="remind" icon="remind" current-icon="remind_fill" title="通知"></i-tab-bar-item>
-        <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的">
-        </i-tab-bar-item>
-      </i-tab-bar>
-  </i-row>
   <i-row>
     <i-col span='2'>
         <block  wx:if="{{!hasUserInfo && canIUse}}">
